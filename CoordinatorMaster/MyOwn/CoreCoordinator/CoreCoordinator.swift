@@ -43,7 +43,6 @@ final class LoginCoordinator: CoreCoordinator<LoginCoordinator.Page, EmptyEnum, 
         case newCoordinator
     }
     
-    @Published var isMainCoordinatorActive: Bool = false
     
     enum Coordinator: IdentifiableEnum {
         case mainCoordinator
@@ -52,7 +51,6 @@ final class LoginCoordinator: CoreCoordinator<LoginCoordinator.Page, EmptyEnum, 
     func showMainCoordinator() {
         //        push(.newCoordinator)
         //        presentSheetItem = .mainCoordinator
-        isMainCoordinatorActive = true
 
         fullCoverPresent(.mainCoordinator)
     }
